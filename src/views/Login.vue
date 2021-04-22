@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> Login </h1>
+    <h1> Login !!</h1>
     <label>Login</label>
     <input v-model="email"/>
     <label>Password</label>
