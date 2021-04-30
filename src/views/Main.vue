@@ -2,7 +2,6 @@
   <div>
     <Header />
     <h1> Accueil </h1>
-    <UserList />
     <Footer />
   </div>
 </template>
@@ -10,13 +9,11 @@
 <script>
 import Header from '@/components/static/Header'
 import Footer from '@/components/static/Footer'
-import UserList from '@/components/UserList'
 
 export default {
   components: {
     Header,
     Footer,
-    UserList,
   }
 }
 </script>

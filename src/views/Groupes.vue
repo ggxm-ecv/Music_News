@@ -2,6 +2,7 @@
   <div>
     <Header />
     <h1> Groupes </h1>
+    <h2> This is a test for groupes </h2>
     <Footer />
   </div>
 </template>

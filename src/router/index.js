@@ -34,6 +34,18 @@ const router = new Router({
       path: '/login',
     },
     {
+      component: Concerts,
+      path: '/concerts',
+    },
+    {
+      component: Artistes,
+      path: '/artistes',
+    },
+    {
+      component: Groupes,
+      path: '/groupes',
+    },
+    {
       component: Register,
       path: '/register',
     },
