@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1> Login </h1>
-    <label>Login</label>
+    <label>Email</label>
     <input v-model="email"/>
-    <label>Password</label>
+    <label>Mot de passe</label>
     <input type="password" v-model="password"/>
     <button @click="submitLogin">Connexion</button>
   </div>

@@ -1,8 +1,7 @@
 <template>
   <div>
     <Header />
-    <h1> Accueil </h1>
-    <UserList />
+    <h1> Groupes </h1>
     <Footer />
   </div>
 </template>
@@ -10,13 +9,11 @@
 <script>
 import Header from '@/components/static/Header'
 import Footer from '@/components/static/Footer'
-import UserList from '@/components/UserList'
 
 export default {
   components: {
     Header,
-    Footer,
-    UserList,
+    Footer
   }
 }
 </script>

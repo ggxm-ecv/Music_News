@@ -48,6 +48,13 @@
       "email": "admin2@gmail.com",
       "password": "$2a$10$v4vUb8M0Igq4Xm/aX.RALOAv.BN0v3NIfp.SiDngdyLqIEnWC8AYK",
       "id": 8
+    },
+    {
+      "email": "gautier.maire@mail-ecv.fr",
+      "password": "$2a$10$jbGmky4eAbxTmArbzKDb2udIsPhGTFeoPzggPuJ..ngxGnRq3c4xS",
+      "firstname": "Gautier",
+      "lastname": "Maire",
+      "id": 9
     }
   ],
   "news": [

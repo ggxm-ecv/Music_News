@@ -6,7 +6,6 @@
 
 <script>
 import axios from 'axios'
-
 export default {
   data () {
     return {
@@ -16,7 +15,6 @@ export default {
   methods: {
     async fetchData () {
       const token = localStorage.getItem('vuejs_token')
-
       const res = axios.get('http://localhost:3000/users', {
         headers: {
           Authorization: `Bearer ${token}`
