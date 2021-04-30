@@ -1,7 +1,13 @@
 <template>
   <div>
     <h2> Tous les artistes </h2>
-    <id-artistes v-for="item in artists" :key="item.name" :name="item.name" :avatar="item.avatar"></id-artistes>
+    <id-artistes 
+      v-for="item in artists" 
+      :key="item.name" 
+      :name="item.name" 
+      :avatar="item.avatar"
+      :desc="item.description"
+    ></id-artistes>
   </div>
 </template>
 
