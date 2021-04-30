@@ -2,6 +2,7 @@
   <div class="id-card">
     <img height="300px" :src="avatar">
     <p> {{ name }} </p>
+    <p> {{desc}} </p>
   </div>
 </template>
 
@@ -15,8 +16,15 @@ export default {
       default: () => 'John'
     },
     avatar: {
-      type: String
-    }
+      type: String,
+      required: true,
+      default: () => 'https://www.blexar.com/avatar.png'
+    },
+    desc: {
+      type: String,
+      required: true,
+      default: () => 'Unknown'
+    },
   }
 }
 </script>
