@@ -1,5 +1,6 @@
 <template>
   <div class="id-card">
+    <img height="300px" :src="avatar">
     <p> {{ name }} </p>
   </div>
 </template>
@@ -13,6 +14,9 @@ export default {
       type: String,
       required: true,
       default: () => 'John'
+    },
+    avatar: {
+      type: String
     }
   }
 }
