@@ -8,7 +8,6 @@
 <script>
 import IdArtistes from "@/components/artistes/IdArtistes"
 import axios from 'axios'
-
 export default {
   name: 'test',
   data () {
@@ -22,7 +21,6 @@ export default {
   methods: {
     async fetchData () {
       const token = localStorage.getItem('vuejs_token')
-
       const res = axios.get('http://localhost:3000/artists', {
         headers: {
           Authorization: `Bearer ${token}`
