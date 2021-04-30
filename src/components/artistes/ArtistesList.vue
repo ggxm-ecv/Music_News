@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2> Tous les artistes </h2>
-    <id-artistes v-for="item in artists" :key="item.name" :name="item.name"></id-artistes>
+    <id-artistes v-for="item in artists" :key="item.name" :name="item.name" :avatar="item.avatar"></id-artistes>
   </div>
 </template>
 
@@ -21,14 +21,14 @@ export default {
   methods: {
     async fetchData () {
       const token = localStorage.getItem('vuejs_token')
-      const res = axios.get('http://localhost:3000/artists', {
+
+      const res = await axios.get('http://localhost:3000/artists', {
         headers: {
           Authorization: `Bearer ${token}`
         }
       })
-      console.log(res)
+      console.log(res.data)
       this.artists = res.data
-      console.log(this.artists)
     }
   },
   mounted () {
