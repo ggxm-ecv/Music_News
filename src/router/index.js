@@ -4,6 +4,9 @@ import Vue from 'vue'
 import Main from '@/views/Main'
 import Login from '@/views/Login'
 import Register from '@/views/Register'
+import Concerts from '@/views/Concerts'
+import Artistes from '@/views/Artistes'
+import Groupes from '@/views/Groupes'
 
 import auth from '@/api/auth'
 
@@ -23,6 +26,18 @@ const router = new Router({
     {
       component: Login,
       path: '/login',
+    },
+    {
+      component: Concerts,
+      path: '/concerts',
+    },
+    {
+      component: Artistes,
+      path: '/artistes',
+    },
+    {
+      component: Groupes,
+      path: '/groupes',
     },
     {
       component: Register,

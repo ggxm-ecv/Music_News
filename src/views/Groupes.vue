@@ -1,12 +1,13 @@
 <template>
   <div>
     <Header />
-    <h1> Mon application </h1>
+    <h1> This is a test for groupes </h1>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
+
+import Header from "@/components/Header"
 
 export default {
   components: {
