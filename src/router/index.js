@@ -7,8 +7,6 @@ import Register from '@/views/Register'
 import Concerts from '@/views/Concerts'
 import Artistes from '@/views/Artistes'
 import Artiste from '@/views/Artiste'
-import Groupes from '@/views/Groupes'
-import Groupe from '@/views/Groupe'
 import Admin from '@/views/Admin'
 
 import auth from '@/api/auth'
@@ -34,18 +32,6 @@ const router = new Router({
       path: '/login',
     },
     {
-      component: Concerts,
-      path: '/concerts',
-    },
-    {
-      component: Artistes,
-      path: '/artistes',
-    },
-    {
-      component: Groupes,
-      path: '/groupes',
-    },
-    {
       component: Register,
       path: '/register',
     },
@@ -60,14 +46,6 @@ const router = new Router({
     {
       component: Artiste,
       path: '/artiste/:id',
-    },
-    {
-      component: Groupes,
-      path: '/groupes',
-    },
-    {
-      component: Groupe,
-      path: '/groupe/:id',
     },
 
     // Back Office
