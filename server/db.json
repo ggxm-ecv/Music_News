@@ -55,6 +55,13 @@
       "firstname": "Gautier",
       "lastname": "Maire",
       "id": 9
+    },
+    {
+      "email": "vincentmanachem@gmail.com",
+      "password": "$2a$10$X6lqrDqvU2NCy1JElItQ0OwfBTx3on.egy1ymqNzn654XEFHP8Svi",
+      "firstname": "Vincent",
+      "lastname": "Manachem",
+      "id": 10
     }
   ],
   "news": [

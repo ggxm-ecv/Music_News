@@ -12,7 +12,7 @@
     </nav>
     
     <div class="news">
-
+      <NewsList />
     </div>
 
     <div class="albums">
@@ -26,11 +26,13 @@
 <script>
 import Header from '@/components/static/Header'
 import Footer from '@/components/static/Footer'
+import NewsList from '@/components/news/NewsList'
 
 export default {
   components: {
     Header,
     Footer,
+    NewsList
   }
 }
 </script>
