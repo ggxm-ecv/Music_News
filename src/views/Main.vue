@@ -1,7 +1,24 @@
 <template>
   <div>
     <Header />
+
     <h1> Accueil </h1>
+
+    <nav>
+      <ul class="home__nav">
+        <li>Actualités</li>
+        <li>Albums</li>
+      </ul>
+    </nav>
+    
+    <div class="news">
+
+    </div>
+
+    <div class="albums">
+
+    </div>
+    
     <Footer />
   </div>
 </template>
