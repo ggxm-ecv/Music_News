@@ -1,38 +1,38 @@
 <template>
   <div>
-    <h2> Tous les artistes : </h2>
-    <id-artiste 
-      v-for="artist in artists" 
-      :key="artist.id" 
-      :artist="artist"
-    ></id-artiste>
+    <h2> Tous les concerts : </h2>
+    <id-concerts 
+      v-for="concert in concerts" 
+      :key="concert.id" 
+      :concert="concert"
+    ></id-concerts>
   </div>
 </template>
 
 <script>
-import IdArtiste from "@/components/artistes/IdArtiste"
+import IdConcerts from "@/components/concerts/IdConcert"
 import axios from 'axios'
 export default {
-  name: 'ArtistesList',
+  name: 'ConcertsList',
   data () {
     return {
-      artists: [],
+      concerts: [],
     }
   },
   components: {
-    'id-artiste': IdArtiste
+    'id-concerts': IdConcerts
   },
   methods: {
     async fetchData () {
       const token = localStorage.getItem('vuejs_token')
 
-      const res = await axios.get('http://localhost:3000/artists', {
+      const res = await axios.get('http://localhost:3000/concerts', {
         headers: {
           Authorization: `Bearer ${token}`
         }
       })
       console.log(res.data)
-      this.artists = res.data
+      this.concerts = res.data
     }
   },
   mounted () {
