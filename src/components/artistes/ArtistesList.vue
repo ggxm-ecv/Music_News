@@ -12,6 +12,7 @@
 <script>
 import IdArtiste from "@/components/artistes/IdArtiste"
 import axios from 'axios'
+
 export default {
   name: 'ArtistesList',
   data () {

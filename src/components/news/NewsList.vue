@@ -3,7 +3,7 @@
     <h2> Les dernières news </h2>
     <id-news
       v-for="news in news" 
-      :key="news.title" 
+      :key="news.id" 
       :news="news"
     ></id-news>
   </div>
