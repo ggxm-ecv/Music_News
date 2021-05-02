@@ -2,11 +2,9 @@
   <div>
     <h2> Les dernières news </h2>
     <id-news
-      v-for="item in news" 
-      :key="item.title" 
-      :title="item.title" 
-      :published="item.published"
-      :content="item.content"
+      v-for="news in news" 
+      :key="news.title" 
+      :news="news"
     ></id-news>
   </div>
 </template>
@@ -16,7 +14,7 @@ import IdNews from "@/components/news/IdNews"
 import axios from 'axios'
 
 export default {
-  name: 'test',
+  name: 'NewsList',
   data () {
     return {
       news: [],
@@ -34,7 +32,6 @@ export default {
           Authorization: `Bearer ${token}`
         }
       })
-      console.log(res.data)
       this.news = res.data
     }
   },

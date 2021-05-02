@@ -10,7 +10,7 @@
 export default {
   props: {
     artist: {
-      type: Array,
+      type: Object,
       required: true,
       default: () => []
     },

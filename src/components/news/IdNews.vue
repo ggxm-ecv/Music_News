@@ -1,8 +1,8 @@
 <template>
   <div class="id-card">
-    <p> {{ title }} </p>
-    <p> {{ published }} </p>
-    <p> {{ content }} </p>
+    <p> {{ news.title }} </p>
+    <p> {{ news.published }} </p>
+    <p> {{ news.content }} </p>
   </div>
 </template>
 
@@ -11,20 +11,10 @@
 export default {
   
   props: {
-    title: {
-      type: String,
+    news: {
+      type: Object,
       required: true,
-      default: () => 'Title'
-    },
-    published: {
-      type: String,
-      required: true,
-      default: () => '01-01-0101'
-    },
-    content: {
-      type: String,
-      required: true,
-      default: () => 'Some content'
+      default: () => []
     },
   }
 }
