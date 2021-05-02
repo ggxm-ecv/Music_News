@@ -10,7 +10,7 @@
 export default {
   props: {
     concert: {
-      type: Array,
+      type: Object,
       required: true,
       default: () => []
     },
