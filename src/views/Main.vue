@@ -21,11 +21,11 @@
       </ul>
     </nav>
     
-    <div v-if="content.news" class="home__cat news">
+    <div v-if="content.news" class="home__cat">
       <NewsList />
     </div>
 
-    <div v-if="content.albums" class="home__cat albums">
+    <div v-if="content.albums" class="home__cat">
       <AlbumsList />
     </div>
     
@@ -100,10 +100,6 @@ export default {
   .home__nav-item:hover {
     background-color: #222;
     color: #fff;
-  }
-
-  .home__cat.active {
-    display: block;
   }
 
 </style>
