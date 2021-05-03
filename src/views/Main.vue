@@ -21,11 +21,11 @@
       </ul>
     </nav>
     
-    <div class="home__cat news active">
+    <div v-if="content.news" class="home__cat news">
       <NewsList />
     </div>
 
-    <div class="home__cat albums">
+    <div v-if="content.albums" class="home__cat albums">
       <AlbumsList />
     </div>
     
@@ -40,6 +40,14 @@ import NewsList from '@/components/news/NewsList'
 import AlbumsList from '@/components/albums/AlbumsList'
 
 export default {
+  data () {
+    return {
+      content: {
+        news: true,
+        albums: false
+      }
+    }
+  },
   components: {
     Header,
     Footer,
@@ -48,8 +56,7 @@ export default {
   },
   methods: {
     switchCat: function (e) {
-      const navItemSelected = e.target
-      const catName = navItemSelected.getAttribute('cat-name')
+      const catName = e.target.getAttribute('cat-name')
 
       document.getElementsByClassName('home__nav-item').forEach(element => {
         element.classList.remove('active')
@@ -57,10 +64,10 @@ export default {
 
       e.target.classList.add('active')
 
-      document.getElementsByClassName('home__cat').forEach(element => {
-        element.classList.remove('active')
-        if (element.classList.contains(`${catName}`)) {
-          element.classList.add('active')
+      Object.keys(this.content).forEach(key => {
+        this.content[key] = false
+        if (key === catName) {
+          this.content[key] = true
         }
       })
     }
@@ -93,10 +100,6 @@ export default {
   .home__nav-item:hover {
     background-color: #222;
     color: #fff;
-  }
-
-  .home__cat {
-    display: none;
   }
 
   .home__cat.active {
