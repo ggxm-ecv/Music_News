@@ -10,17 +10,11 @@
 import axios from 'axios'
 
 export default {
-  props: {
-    artist: {
-      type: Object,
-      required: true,
-      default: () => []
-    }
-  },
+  
   name: 'IdArtiste',
   data () {
     return {
-      artists: [],
+      artist: [],
     }
   },
   methods: {
