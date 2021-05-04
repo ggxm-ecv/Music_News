@@ -1,13 +1,23 @@
 <template>
   <div class="id-card">
     <img height="300px" :src="artist.avatar">
-    <p> {{ artist.name }} </p>
+    <h1> {{ artist.name }} </h1>
+    <p> {{ artist.country }} </p>
     <p> {{ artist.description }} </p>
+
+    <h2>Albums</h2>
+    <AlbumsList />
+    
+    <h2>Concerts</h2>
+    <ConcertsList />
+    
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import AlbumsList from '@/components/albums/AlbumsList'
+import ConcertsList from '@/components/concertsArtiste/ConcertsList'
 
 export default {
   
@@ -16,6 +26,10 @@ export default {
     return {
       artist: [],
     }
+  },
+  components: {
+    AlbumsList,
+    ConcertsList
   },
   methods: {
     async fetchData () {

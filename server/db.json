@@ -161,6 +161,20 @@
       "released": 2018,
       "tracks": 13,
       "artistId": 2
+    },
+    {
+      "id": 3,
+      "name": "Batterie Faible",
+      "released": 2016,
+      "tracks": 14,
+      "artistId": 3
+    },
+    {
+      "id": 4,
+      "name": "Test",
+      "released": 2020,
+      "tracks": 15,
+      "artistId": 4
     }
   ],
   "concerts": [
