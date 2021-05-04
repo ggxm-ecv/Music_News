@@ -80,14 +80,17 @@ export default {
   .home__nav {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0;
   }
 
   .home__nav-item {
     cursor: pointer;
+    margin: 4px;
     padding: 8px 16px;
     border: 2px solid #222;
     border-radius: 4px;
