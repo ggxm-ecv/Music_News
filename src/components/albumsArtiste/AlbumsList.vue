@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import IdAlbum from "@/components/albums/IdAlbum"
+import IdAlbum from "@/components/albumsArtiste/IdAlbum"
 import axios from 'axios'
 
 export default {

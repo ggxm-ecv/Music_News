@@ -16,7 +16,7 @@
 
 <script>
 import axios from 'axios'
-import AlbumsList from '@/components/albums/AlbumsList'
+import AlbumsList from '@/components/albumsArtiste/AlbumsList'
 import ConcertsList from '@/components/concertsArtiste/ConcertsList'
 
 export default {
