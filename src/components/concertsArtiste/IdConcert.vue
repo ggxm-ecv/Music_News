@@ -1,23 +1,18 @@
 <template>
-  <router-link :to="{ path: `/artiste/${artist.id}` }">
-  <div class="id-card">
-    <img height="300px" :src="artist.avatar">
-    <p> {{ artist.name }} </p>
-    <p> {{ artist.description }} </p>
-  </div> 
-
-  </router-link>
+  <div v-if="concert.artistId == `${this.$route.params.id}`" class="id-card">
+    <p>A {{ concert.name }} le {{ concert.date }} </p>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    artist: {
+    concert: {
       type: Object,
       required: true,
       default: () => []
-    },
-  }
+    }
+  },
 }
 </script>
 
