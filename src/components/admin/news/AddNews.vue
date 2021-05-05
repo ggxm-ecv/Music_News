@@ -35,7 +35,7 @@ export default {
         const map = {
           mm: date.getMonth() + 1,
           dd: date.getDate(),
-          yy: date.getFullYear().toString().slice(-2),
+          yy: date.getFullYear().toString(),
           yyyy: date.getFullYear()
         }
 
