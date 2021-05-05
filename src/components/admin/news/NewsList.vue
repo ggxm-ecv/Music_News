@@ -2,7 +2,7 @@
   <div>
     <h2> Les dernières news </h2>
     <br>
-    <AddNews />
+    <AddNews @getNewData="setNewData" />
     <id-news
       v-for="news in news" 
       :key="news.id" 
@@ -37,6 +37,9 @@ export default {
         }
       })
       this.news = res.data
+    },
+    setNewData (data) {
+      this.news.push(data)
     }
   },
   mounted () {

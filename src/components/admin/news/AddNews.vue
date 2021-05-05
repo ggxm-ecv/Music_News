@@ -48,6 +48,9 @@ export default {
       this.form.published = todayGood
 
       const res = axios.post('http://localhost:3000/news', this.form)
+        .then(function (response) {
+          this.$emit('getNewData', this.form)
+        }.bind(this))
       this.news = res.data
     }
   }

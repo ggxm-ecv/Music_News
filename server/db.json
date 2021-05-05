@@ -88,6 +88,12 @@
       "content": "custom content",
       "published": "4/5/21",
       "id": 4
+    },
+    {
+      "title": "test auto refresh",
+      "content": "test auto refresh",
+      "published": "5/5/21",
+      "id": 5
     }
   ],
   "genres": [
