@@ -74,35 +74,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-  .home__nav {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 600px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .home__nav-item {
-    cursor: pointer;
-    margin: 4px;
-    padding: 8px 16px;
-    border: 2px solid #222;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #222;
-    transition: all 150ms ease-out;
-  }
-
-  .home__nav-item.active,
-  .home__nav-item:hover {
-    background-color: #222;
-    color: #fff;
-  }
-
-</style>

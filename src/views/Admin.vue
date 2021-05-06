@@ -107,35 +107,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-  .admin__nav {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 600px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .admin__nav-item {
-    cursor: pointer;
-    margin: 4px;
-    padding: 8px 16px;
-    border: 2px solid #222;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #222;
-    transition: all 150ms ease-out;
-  }
-
-  .admin__nav-item.active,
-  .admin__nav-item:hover {
-    background-color: #222;
-    color: #fff;
-  }
-
-</style>
