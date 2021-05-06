@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2> Les dernièrs albums </h2>
+    <br>
+    <AddAlbum @getNewData="setNewData" />
+    <br>
     <id-album
       v-for="album in albums" 
       :key="album.id" 
@@ -12,6 +15,7 @@
 <script>
 import axios from 'axios'
 import IdAlbum from "@/components/admin/albums/IdAlbum"
+import AddAlbum from "@/components/admin/albums/AddAlbum"
 
 export default {
   name: 'AlbumsList',
@@ -21,7 +25,8 @@ export default {
     }
   },
   components: {
-    'id-album': IdAlbum
+    'id-album': IdAlbum,
+    AddAlbum
   },
   methods: {
     async fetchData () {
@@ -33,6 +38,9 @@ export default {
         }
       })
       this.albums = res.data
+    },
+    setNewData (data) {
+      this.albums.push(data)
     }
   },
   mounted () {

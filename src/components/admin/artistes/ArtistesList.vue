@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2> Tous les artistes </h2>
+    <br>
+    <AddArtiste @getNewData="setNewData" />
+    <br>
     <id-artiste 
       v-for="artist in artists" 
       :key="artist.id" 
@@ -12,6 +15,7 @@
 <script>
 import axios from 'axios'
 import IdArtiste from "@/components/admin/artistes/IdArtiste"
+import AddArtiste from "@/components/admin/artistes/AddArtiste"
 
 export default {
   name: 'ArtistesList',
@@ -21,7 +25,8 @@ export default {
     }
   },
   components: {
-    'id-artiste': IdArtiste
+    'id-artiste': IdArtiste,
+    AddArtiste
   },
   methods: {
     async fetchData () {
@@ -33,6 +38,9 @@ export default {
         }
       })
       this.artists = res.data
+    },
+    setNewData (data) {
+      this.artists.push(data)
     }
   },
   mounted () {

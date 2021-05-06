@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2> Tous les genres </h2>
+    <br>
+    <AddGenre @getNewData="setNewData" />
+    <br>
     <id-genre
       v-for="genre in genres" 
       :key="genre.id" 
@@ -12,6 +15,7 @@
 <script>
 import axios from 'axios'
 import IdGenre from "@/components/admin/genres/IdGenre"
+import AddGenre from "@/components/admin/genres/AddGenre"
 
 export default {
   name: 'GenresList',
@@ -21,7 +25,8 @@ export default {
     }
   },
   components: {
-    'id-genre': IdGenre
+    'id-genre': IdGenre,
+    AddGenre
   },
   methods: {
     async fetchData () {
@@ -33,6 +38,9 @@ export default {
         }
       })
       this.genres = res.data
+    },
+    setNewData (data) {
+      this.genres.push(data)
     }
   },
   mounted () {

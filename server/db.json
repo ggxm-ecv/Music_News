@@ -82,12 +82,6 @@
       "title": "News 3",
       "published": "14/09/2020",
       "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      "title": "test",
-      "content": "test",
-      "published": "5/5/2021",
-      "id": 4
     }
   ],
   "genres": [
@@ -122,13 +116,17 @@
     {
       "id": 8,
       "name": "jazz"
+    },
+    {
+      "name": "azertyu",
+      "id": 9
     }
   ],
   "artists": [
     {
       "id": 1,
       "name": "Coldplay",
-      "country": "Great Britain",
+      "origin": "Great Britain",
       "avatar": "https://lecanalauditif.ca/wp-content/uploads/2018/01/coldplay-588x588.jpg",
       "genreId": 1,
       "likes": 100310,
@@ -151,6 +149,15 @@
       "genreId": 3,
       "likes": 20420,
       "description": "Damso, de son vrai nom William Kalubi Mwamba, né le 10 mai 1992 à Kinshasa (Zaïre, actuelle République démocratique du Congo), est un rappeur et auteur-compositeur-interprète belgo-congolais."
+    },
+    {
+      "name": "Therapie Taxi",
+      "origin": "azertyuio",
+      "avatar": "https://gonzai.com/wp-content/uploads/2019/01/taxi-therapie.png",
+      "genreId": 3,
+      "description": "azertyuio sdfghj cvbn, dfghj",
+      "likes": 0,
+      "id": 4
     }
   ],
   "albums": [
@@ -201,6 +208,12 @@
       "name": "O2 Academy Manchester",
       "date": "10/12/2018",
       "artistId": 2
+    },
+    {
+      "name": "azertyui",
+      "date": "29/05/2021",
+      "artistId": 1,
+      "id": 4
     }
   ]
 }

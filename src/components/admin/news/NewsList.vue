@@ -3,6 +3,7 @@
     <h2> Les dernières news </h2>
     <br>
     <AddNews @getNewData="setNewData" />
+    <br>
     <id-news
       v-for="news in news" 
       :key="news.id" 

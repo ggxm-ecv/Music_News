@@ -82,7 +82,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 200px;
+    width: 600px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
