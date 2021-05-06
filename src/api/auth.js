@@ -5,5 +5,4 @@ const instance = axios.create({
   headers: { Authorization: `Bearer ${localStorage.getItem('vuejs_token')}` }
 })
 
-
 export default instance

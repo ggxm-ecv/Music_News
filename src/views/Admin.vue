@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import NewsList from '@/components/admin/news/NewsList'
 import ArtistesList from '@/components/admin/artistes/ArtistesList'
 import AlbumsList from '@/components/admin/albums/AlbumsList'
@@ -103,7 +104,25 @@ export default {
           this.content[key] = true
         }
       })
+    },
+    async checkIsAdmin () {
+      const token_user = localStorage.getItem('vuejs_user_id')
+      
+      const token = localStorage.getItem('vuejs_token')
+
+      const res = await axios.get(`http://localhost:3000/users/${token_user}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      const user = res.data
+      if (user.role !== 'admin') {
+        this.$router.push({ path: '/login' })
+      }
     }
+  },
+  created () {
+    this.checkIsAdmin()
   }
 }
 </script>

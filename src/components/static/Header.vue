@@ -5,14 +5,18 @@
     <router-link to="/artistes"> Artistes/Groupes </router-link>
     <router-link to="/login"> Connexion </router-link>
     <router-link to="/register"> Inscription </router-link>
+
+    <button @click="logout"> Logout </button>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-
+  methods: {
+    logout () {
+      localStorage.removeItem('vuejs_token')
+      localStorage.removeItem('vuejs_user_id')
+      this.$router.push({ path: '/login' })
     }
   }
 }

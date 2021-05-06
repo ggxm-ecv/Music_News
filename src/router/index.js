@@ -23,9 +23,6 @@ const router = new Router({
     {
       component: Main,
       path: '/',
-      meta: {
-        auth: true,
-      }
     },
     {
       component: Login,

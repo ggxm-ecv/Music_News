@@ -40,6 +40,8 @@ export default {
 
       localStorage.setItem('vuejs_token', accessToken)
       localStorage.setItem('vuejs_user_id', sub)
+
+      this.$router.push({ path: '/' })
     }
   }
 }
