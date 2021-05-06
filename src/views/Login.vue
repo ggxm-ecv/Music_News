@@ -12,6 +12,7 @@
 <script>
 import axios from 'axios'
 import jwt_decode from "jwt-decode"
+
 export default {
   data () {
     return {
@@ -26,14 +27,14 @@ export default {
         email: this.email,
         password: this.password,
       })
-      
+
       const { accessToken } = res.data
       const { sub } = jwt_decode(accessToken)
 
       localStorage.setItem('vuejs_token', accessToken)
       localStorage.setItem('vuejs_user_id', sub)
-
-      this.$router.push({ path: '/' })
+      
+      this.$router.push(this.$route.query.redirect || '/')
     }
   }
 }

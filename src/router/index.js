@@ -60,12 +60,23 @@ const router = new Router({
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some(route => route.meta.auth)) {
     try {
-      await auth.get(`/users/${localStorage.getItem('vuejs_user_id')}`)
-      return next()
+      const res = await auth.get(`/users/${localStorage.getItem('vuejs_user_id')}`)
+      
+      if (res.data.role === 'admin') {
+        return next()
+      } else {
+        return next('/login')
+      }
     } catch (e) {
       localStorage.removeItem('vuejs_user_id')
       localStorage.removeItem('vuejs_token')
-      return next('/login')
+      
+      return next({
+        path: '/login',
+        query: {
+          redirect: to.fullPath,
+        }
+      })
     }
   } else {
     return next()
