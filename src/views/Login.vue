@@ -17,6 +17,7 @@ export default {
     return {
       email: null,
       password: null,
+      error: null,
     }
   },
   methods: {
@@ -25,12 +26,18 @@ export default {
         email: this.email,
         password: this.password,
       })
+      
       const { accessToken } = res.data
+      console.log(accessToken)
+        
 
       const { sub } = jwt_decode(accessToken)
+      console.log(sub)
 
       localStorage.setItem('vuejs_token', accessToken)
       localStorage.setItem('vuejs_user_id', sub)
+
+      this.$router.push({ path: '/' })
     }
   }
 }

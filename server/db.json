@@ -1,67 +1,26 @@
 {
   "users": [
     {
-      "email": "toto@example.com",
-      "password": "$2a$10$dXNszRnkYBxyRPwYHgIfxeOD0/IBDbkI2aXpj1qXrMwvoVKPXa1Vq",
-      "id": 1
-    },
-    {
-      "email": "louis@narah.io",
-      "password": "$2a$10$v0jkOi/aWgRCqy8CyQ7GU.MMBDXE2HWZtIByR9glCw9SfMV5vp2kq",
+      "email": "admin@admin.com",
+      "password": "$2a$10$.MtDCUe/CecYrIupOl.KAeFlRJ4C/y/n3NPH6br0wxznce.ZEbMmi",
+      "firstname": "Admin",
+      "lastname": "Admin",
       "role": "admin",
-      "id": 2
-    },
-    {
-      "email": "admin@gmail.com",
-      "password": "$2a$10$FEzQOpyzd6sNxBU05NaWOuKuwu2ZxFeB3n0iLVwON7AwsACBgwn.S",
-      "id": 3
-    },
-    {
-      "email": "toto@gmail.com",
-      "password": "$2a$10$e/W.8lOkX9mwydK.XcDJOu8f2mv5MWlI4rISDJ0DqPRVufnoNU5va",
-      "firstname": "louis",
-      "lastname": "harang",
-      "id": 4
-    },
-    {
-      "email": "qzdqzzqd@gmail.com",
-      "password": "$2a$10$jyxLSUpYvndAQZ.AONsvxujCVFwnA/Mu3CUP1WCJ2p2PsA5J20XXW",
-      "firstname": "qdqzdzq",
-      "lastname": "qzdzdq",
-      "id": 5
-    },
-    {
-      "email": "qdqzdqzd@gmail.com",
-      "password": "$2a$10$pF1M3TQqME.vwcDorQWNIujtG31yx6ZpwExZ5uR0i.3ogfIwA35ua",
-      "firstname": "qdqzdq",
-      "lastname": "qzdqzd",
-      "id": 6
-    },
-    {
-      "email": "qzdqqz@gmail.com",
-      "password": "$2a$10$DKFeGxRnahYPul1GoKQslOHywSZq3ywtcV54VQazgSZUt5jgQ0mMa",
-      "firstname": "qzdqzd",
-      "lastname": "qzdzq",
-      "id": 7
-    },
-    {
-      "email": "admin2@gmail.com",
-      "password": "$2a$10$v4vUb8M0Igq4Xm/aX.RALOAv.BN0v3NIfp.SiDngdyLqIEnWC8AYK",
-      "id": 8
+      "id": 1
     },
     {
       "email": "gautier.maire@mail-ecv.fr",
       "password": "$2a$10$jbGmky4eAbxTmArbzKDb2udIsPhGTFeoPzggPuJ..ngxGnRq3c4xS",
       "firstname": "Gautier",
       "lastname": "Maire",
-      "id": 9
+      "id": 2
     },
     {
       "email": "vincentmanachem@gmail.com",
       "password": "$2a$10$X6lqrDqvU2NCy1JElItQ0OwfBTx3on.egy1ymqNzn654XEFHP8Svi",
       "firstname": "Vincent",
       "lastname": "Manachem",
-      "id": 10
+      "id": 3
     }
   ],
   "news": [
@@ -84,8 +43,8 @@
       "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      "title": "test",
-      "content": "test",
+      "title": "testdts",
+      "content": "op<3",
       "published": "5/5/2021",
       "id": 4
     }
