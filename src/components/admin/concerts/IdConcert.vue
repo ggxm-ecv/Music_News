@@ -3,6 +3,7 @@
     <p> Nom : {{ concert.name }} </p>
     <p> Date : {{concert.date}} </p>
     <p> Artiste id : {{concert.artistId}} </p>
+    <slot></slot>
   </div>
 </template>
 

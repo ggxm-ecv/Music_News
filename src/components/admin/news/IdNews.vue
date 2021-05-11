@@ -3,6 +3,7 @@
     <p> {{ news.title }} </p>
     <p> {{ news.published }} </p>
     <p> {{ news.content }} </p>
+    <slot></slot>
   </div>
 </template>
 

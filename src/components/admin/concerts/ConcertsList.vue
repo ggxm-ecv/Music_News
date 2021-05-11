@@ -8,7 +8,9 @@
       v-for="concert in concerts" 
       :key="concert.id" 
       :concert="concert"
-    ></id-concerts>
+    >
+      <button @click="deleteConcert(concert)"> Supprimer le Concert </button>
+    </id-concerts>
   </div>
 </template>
 
@@ -41,6 +43,14 @@ export default {
     },
     setNewData (data) {
       this.concerts.push(data)
+    },
+    async deleteConcert (concert) {
+      await axios
+        .delete(`http://localhost:3000/concerts/${concert.id}`)
+        .then(response => {
+          this.concerts = this.concerts.filter((el) => el.id !== concert.id)
+        })
+        .catch(error => console.log('Error : ' + error))
     }
   },
   mounted () {

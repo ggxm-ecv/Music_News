@@ -8,7 +8,9 @@
       v-for="album in albums" 
       :key="album.id" 
       :album="album"
-    ></id-album>
+    >
+      <button @click="deleteAlbum(album)"> Supprimer l'Album </button>
+    </id-album>
   </div>
 </template>
 
@@ -41,6 +43,14 @@ export default {
     },
     setNewData (data) {
       this.albums.push(data)
+    },
+    async deleteAlbum (album) {
+      await axios
+        .delete(`http://localhost:3000/albums/${album.id}`)
+        .then(response => {
+          this.albums = this.albums.filter((el) => el.id !== album.id)
+        })
+        .catch(error => console.log('Error : ' + error))
     }
   },
   mounted () {

@@ -75,10 +75,6 @@
     {
       "id": 8,
       "name": "jazz"
-    },
-    {
-      "name": "azertyu",
-      "id": 9
     }
   ],
   "artists": [
@@ -140,13 +136,6 @@
       "released": 2016,
       "tracks": 14,
       "artistId": 3
-    },
-    {
-      "id": 4,
-      "name": "Test",
-      "released": 2020,
-      "tracks": 15,
-      "artistId": 4
     }
   ],
   "concerts": [
@@ -167,12 +156,6 @@
       "name": "O2 Academy Manchester",
       "date": "10/12/2018",
       "artistId": 2
-    },
-    {
-      "name": "azertyui",
-      "date": "29/05/2021",
-      "artistId": 1,
-      "id": 4
     }
   ]
 }

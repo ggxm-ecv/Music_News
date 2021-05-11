@@ -55,7 +55,7 @@ export default {
 
       axios.post('http://localhost:3000/concerts', this.form)
         .then(function (response) {
-          this.$emit('getNewData', this.form)
+          this.$emit('getNewData', response.data)
         }.bind(this))
     }
   }

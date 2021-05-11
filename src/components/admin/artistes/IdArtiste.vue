@@ -3,6 +3,7 @@
     <img height="300px" :src="artist.avatar">
     <p> {{ artist.name }} </p>
     <p> {{artist.description}} </p>
+    <slot></slot>
   </div>
 </template>
 

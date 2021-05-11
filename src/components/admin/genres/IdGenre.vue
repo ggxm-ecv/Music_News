@@ -1,6 +1,7 @@
 <template>
   <div class="id-card">
     <p> {{ genre.name }} </p>
+    <slot></slot>
   </div>
 </template>
 

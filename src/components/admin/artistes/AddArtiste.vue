@@ -44,7 +44,7 @@ export default {
     submitForm () {
       axios.post('http://localhost:3000/artists', this.form)
         .then(function (response) {
-          this.$emit('getNewData', this.form)
+          this.$emit('getNewData', response.data)
         }.bind(this))
     }
   }

@@ -8,7 +8,9 @@
       v-for="artist in artists" 
       :key="artist.id" 
       :artist="artist"
-    ></id-artiste>
+    >
+      <button @click="deleteArtist(artist)"> Supprimer l'Artiste/groupe </button>
+    </id-artiste>
   </div>
 </template>
 
@@ -41,6 +43,14 @@ export default {
     },
     setNewData (data) {
       this.artists.push(data)
+    },
+    async deleteArtist (artist) {
+      await axios
+        .delete(`http://localhost:3000/artists/${artist.id}`)
+        .then(response => {
+          this.artists = this.artists.filter((el) => el.id !== artist.id)
+        })
+        .catch(error => console.log('Error : ' + error))
     }
   },
   mounted () {

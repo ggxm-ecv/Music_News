@@ -4,6 +4,7 @@
     <p> {{ album.released }} </p>
     <p> Nombre de musique : {{ album.tracks }} </p>
     <p> Id artiste/groupe : {{ album.artistId }} </p>
+    <slot></slot>
   </div>
 </template>
 

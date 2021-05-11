@@ -8,7 +8,9 @@
       v-for="news in news" 
       :key="news.id" 
       :news="news"
-    ></id-news>
+    >
+      <button @click="deleteNews(news)"> Supprimer la News </button>
+    </id-news>
   </div>
 </template>
 
@@ -41,6 +43,14 @@ export default {
     },
     setNewData (data) {
       this.news.push(data)
+    },
+    async deleteNews (news) {
+      await axios
+        .delete(`http://localhost:3000/news/${news.id}`)
+        .then(response => {
+          this.news = this.news.filter((el) => el.id !== news.id)
+        })
+        .catch(error => console.log('Error : ' + error))
     }
   },
   mounted () {

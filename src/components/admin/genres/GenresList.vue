@@ -8,7 +8,9 @@
       v-for="genre in genres" 
       :key="genre.id" 
       :genre="genre"
-    ></id-genre>
+    >
+      <button @click="deleteGenre(genre)"> Supprimer le Genre </button>
+    </id-genre>
   </div>
 </template>
 
@@ -41,6 +43,14 @@ export default {
     },
     setNewData (data) {
       this.genres.push(data)
+    },
+    async deleteGenre (genre) {
+      await axios
+        .delete(`http://localhost:3000/genres/${genre.id}`)
+        .then(response => {
+          this.genres = this.genres.filter((el) => el.id !== genre.id)
+        })
+        .catch(error => console.log('Error : ' + error))
     }
   },
   mounted () {
