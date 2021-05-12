@@ -6,7 +6,7 @@
       <input v-model="form.title">
       <br>
       <label>Contenu : </label>
-      <input v-model="form.content">
+      <textarea v-model="form.content" rows="5" cols="33"></textarea>
       <br>
       <br>
       <button @click="submitForm">Ajouter la News</button>
@@ -33,8 +33,8 @@ export default {
     submitForm () {
       function formatDate (date, format) {
         const map = {
-          mm: date.getMonth() + 1,
-          dd: date.getDate(),
+          mm: ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1),
+          dd: (date.getDate() < 10 ? '0' : '') + date.getDate(),
           yy: date.getFullYear().toString(),
           yyyy: date.getFullYear()
         }

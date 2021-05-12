@@ -15,7 +15,7 @@
       <input v-model.number="form.genreId" type="number" min="0">
       <br>
       <label>Description : </label>
-      <input v-model="form.description">
+      <textarea v-model="form.description" rows="5" cols="33"></textarea>
       <br>
       <button @click="submitForm">Ajouter l'artiste</button>
     </div>

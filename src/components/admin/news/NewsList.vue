@@ -8,6 +8,7 @@
       v-for="news in news" 
       :key="news.id" 
       :news="news"
+       @updateData="updateData"
     >
       <button @click="deleteNews(news)"> Supprimer la News </button>
     </id-news>
@@ -43,6 +44,15 @@ export default {
     },
     setNewData (data) {
       this.news.push(data)
+    },
+    updateData (data) {
+      this.news.forEach(el => {
+        if (el.id === data.id) {
+          el.title = data.title
+          el.content = data.content
+          el.published = data.published
+        }
+      })
     },
     async deleteNews (news) {
       await axios
