@@ -8,7 +8,7 @@
       v-for="news in news" 
       :key="news.id" 
       :news="news"
-       @updateData="updateData"
+      @updateData="updateData"
     >
       <button @click="deleteNews(news)"> Supprimer la News </button>
     </id-news>

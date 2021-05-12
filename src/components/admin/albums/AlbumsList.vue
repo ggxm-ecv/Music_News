@@ -8,6 +8,7 @@
       v-for="album in albums" 
       :key="album.id" 
       :album="album"
+      @updateData="updateData"
     >
       <button @click="deleteAlbum(album)"> Supprimer l'Album </button>
     </id-album>
@@ -43,6 +44,16 @@ export default {
     },
     setNewData (data) {
       this.albums.push(data)
+    },
+    updateData (data) {
+      this.albums.forEach(el => {
+        if (el.id === data.id) {
+          el.name = data.name
+          el.released = data.released
+          el.tracks = data.tracks
+          el.artistId = data.artistId
+        }
+      })
     },
     async deleteAlbum (album) {
       await axios

@@ -8,6 +8,7 @@
       v-for="artist in artists" 
       :key="artist.id" 
       :artist="artist"
+      @updateData="updateData"
     >
       <button @click="deleteArtist(artist)"> Supprimer l'Artiste/groupe </button>
     </id-artiste>
@@ -43,6 +44,17 @@ export default {
     },
     setNewData (data) {
       this.artists.push(data)
+    },
+    updateData (data) {
+      this.artists.forEach(el => {
+        if (el.id === data.id) {
+          el.name = data.name
+          el.origin = data.origin
+          el.avatar = data.avatar
+          el.genreId = data.genreId
+          el.description = data.description
+        }
+      })
     },
     async deleteArtist (artist) {
       await axios

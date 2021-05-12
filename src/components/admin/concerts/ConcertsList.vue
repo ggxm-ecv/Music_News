@@ -8,6 +8,7 @@
       v-for="concert in concerts" 
       :key="concert.id" 
       :concert="concert"
+      @updateData="updateData"
     >
       <button @click="deleteConcert(concert)"> Supprimer le Concert </button>
     </id-concerts>
@@ -43,6 +44,15 @@ export default {
     },
     setNewData (data) {
       this.concerts.push(data)
+    },
+    updateData (data) {
+      this.concerts.forEach(el => {
+        if (el.id === data.id) {
+          el.name = data.name
+          el.date = data.date
+          el.artistId = data.artistId
+        }
+      })
     },
     async deleteConcert (concert) {
       await axios

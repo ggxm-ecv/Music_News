@@ -8,6 +8,7 @@
       v-for="genre in genres" 
       :key="genre.id" 
       :genre="genre"
+      @updateData="updateData"
     >
       <button @click="deleteGenre(genre)"> Supprimer le Genre </button>
     </id-genre>
@@ -43,6 +44,13 @@ export default {
     },
     setNewData (data) {
       this.genres.push(data)
+    },
+    updateData (data) {
+      this.genres.forEach(el => {
+        if (el.id === data.id) {
+          el.name = data.name
+        }
+      })
     },
     async deleteGenre (genre) {
       await axios
