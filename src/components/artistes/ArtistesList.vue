@@ -6,6 +6,14 @@
       :key="artist.id" 
       :artist="artist"
     ></id-artiste>
+
+    <paginate
+      :click-handler="functionName"
+      :page-range="3"
+      :prev-text="'Prev'"
+      :next-text="'Next'"
+      :container-class="'className'">
+    </paginate>
   </div>
 </template>
 
@@ -33,6 +41,9 @@ export default {
         }
       })
       this.artists = res.data
+    },
+    functionName: function (pageNum) {
+      console.log(pageNum) 
     }
   },
   mounted () {
@@ -40,3 +51,15 @@ export default {
   }
 }
 </script>
+
+<style >
+  .className {
+    width: 60px;;
+    display: flex;
+    margin: 0 auto;
+    list-style: none;
+  }
+  .className li {
+    margin: 0 20px;
+  }
+</style>
