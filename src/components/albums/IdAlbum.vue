@@ -3,7 +3,7 @@
     <p> {{ album.name }} </p>
     <p> {{ album.released }} </p>
     <p> Nombre de musique : {{ album.tracks }} </p>
-    <p> Artiste : {{ artists[this.album.artistId-1].name }} </p>
+    <p> Artiste : {{ artistName }} </p>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
   data () {
     return {
       artists: [],
+      artistName: ''
     }
   },
   methods: {
@@ -33,6 +34,8 @@ export default {
         }
       })
       this.artists = res.data
+
+      this.artistName = this.artists[this.album.artistId - 1].name
     }
   },
   mounted () {

@@ -2,7 +2,7 @@
   <div class="id-card">
     <p> Nom : {{ concert.name }} </p>
     <p> Date : {{concert.date}} </p>
-    <p> Artiste : {{ artists[this.concert.artistId-1].name }} </p>
+    <p> Artiste : {{ artistName }} </p>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
   data () {
     return {
       artists: [],
+      artistName: ''
     }
   },
   methods: {
@@ -32,6 +33,8 @@ export default {
         }
       })
       this.artists = res.data
+
+      this.artistName = this.artists[this.concert.artistId - 1].name
     }
   },
   mounted () {
