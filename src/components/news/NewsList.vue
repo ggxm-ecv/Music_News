@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2> Les dernières news </h2>
     <id-news
       v-for="news in news" 
       :key="news.id" 

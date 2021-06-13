@@ -2,32 +2,34 @@
   <div>
     <Header />
 
-    <h1> Accueil </h1>
+    <main class="px-6 py-12">
 
-    <nav class="">
-      <ul class="home__nav">
-        <li class="home__nav-item active"
-            cat-name="news"
-            @click="switchCat"
-        >
-          Actualités
-        </li>
-        <li class="home__nav-item"
-            cat-name="albums"
-            @click="switchCat"
-        >
-          Albums
-        </li>
-      </ul>
-    </nav>
-    
-    <div v-if="content.news" class="home__cat">
-      <NewsList />
-    </div>
+      <nav>
+        <ul class="flex justify-center items-center">
+          <li class="home__nav-item active inline-block px-4 py-2 m-2 rounded-lg border-2 border-indigo-600"
+              cat-name="news"
+              @click="switchCat"
+          >
+            Actualités
+          </li>
+          <li class="home__nav-item inline-block px-4 py-2 m-2 rounded-lg border-2 border-indigo-600"
+              cat-name="albums"
+              @click="switchCat"
+          >
+            Albums
+          </li>
+        </ul>
+      </nav>
+      
+      <div v-if="content.news" class="home__cat">
+        <NewsList />
+      </div>
 
-    <div v-if="content.albums" class="home__cat">
-      <AlbumsList />
-    </div>
+      <div v-if="content.albums" class="home__cat">
+        <AlbumsList />
+      </div>
+
+    </main>
     
     <Footer />
   </div>
