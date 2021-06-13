@@ -1,7 +1,7 @@
 <template>
-  <div class="id-card">
-    <p> Nom : {{ concert.name }} </p>
-    <p> Date : {{concert.date}} </p>
+  <div class="id-card bg-indigo-600 p-6 rounded-lg shadow-lg">
+    <p class="text-2xl"> {{ concert.name }} </p>
+    <p class="mt-4"> Le {{concert.date}} </p>
     <p> Artiste : {{ artistName }} </p>
   </div>
 </template>

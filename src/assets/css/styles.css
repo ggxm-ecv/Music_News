@@ -4,6 +4,10 @@
 
 /********** General *********/
 
+html {
+  background-color: #312E81;
+}
+
 main {
   min-height: 100vh;
 }
@@ -27,6 +31,10 @@ input::placeholder {
   width: 32px;
   height: 32px;
   fill: #FFF;
+}
+
+.header__main-nav-link {
+  display: inline-block;
 }
 
 .header__main-nav-link-txt,
@@ -65,6 +73,10 @@ input::placeholder {
   width: 32px;
   height: 32px;
   fill: #FFF;
+}
+
+.footer__main-nav-link {
+  display: inline-block;
 }
 
 .footer__main-nav-link-txt {
@@ -110,6 +122,26 @@ input::placeholder {
   width: 600px;
   max-width: 90%;
   margin: 25px auto;
+}
+
+
+/********** Artistes/Groupes *********/
+
+.artiste__img {
+  height: 260px;
+  max-height: 260px;
+  margin: 0 auto;
+}
+
+.artiste__back-link {
+ cursor: pointer;
+}
+
+.artiste__back-link-svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  fill: #fff;
 }
 
 

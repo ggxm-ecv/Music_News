@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2> Tous les concerts : </h2>
     <id-concerts 
       v-for="concert in concerts" 
       :key="concert.id" 

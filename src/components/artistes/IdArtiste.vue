@@ -1,10 +1,9 @@
 <template>
-  <router-link :to="{ path: `/artiste/${artist.id}` }">
-  <div class="id-card">
-    <img height="300px" :src="artist.avatar">
-    <p> {{ artist.name }} </p>
-    <p> {{ artist.description }} </p>
-  </div> 
+  <router-link :to="{ path: `/artiste/${artist.id}` }" class="id-card block bg-indigo-600 p-6 rounded-lg shadow-lg">
+
+    <img class="artiste__img rounded-lg" :src="artist.avatar">
+    <p class="mt-4 text-2xl font-bold"> {{ artist.name }} </p>
+    <p class="mt-2"> {{ artist.description }} </p>
 
   </router-link>
 </template>

@@ -1,14 +1,14 @@
 <template>
-  <div class="id-card">
-    <img height="300px" :src="artist.avatar">
-    <h1> {{ artist.name }} </h1>
-    <p> {{ artist.country }} </p>
-    <p> {{ artist.description }} </p>
+  <div class="id-card block bg-indigo-600 p-6 rounded-lg shadow-lg">
+    <img class="artiste__img rounded-lg" :src="artist.avatar">
+    <h2 class="mt-4 text-2xl font-bold"> {{ artist.name }} </h2>
+    <p class="mt-2"> {{ artist.country }} </p>
+    <p class="mt-2"> {{ artist.description }} </p>
 
-    <h2>Albums</h2>
+    <h3 class="mt-6 font-bold">Albums :</h3>
     <AlbumsList />
     
-    <h2>Concerts</h2>
+    <h3 class="mt-6 font-bold">Concerts :</h3>
     <ConcertsList />
     
   </div>

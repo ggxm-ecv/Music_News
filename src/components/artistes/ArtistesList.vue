@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2> Tous les artistes : </h2>
     <id-artiste 
       v-for="artist in artists" 
       :key="artist.id" 

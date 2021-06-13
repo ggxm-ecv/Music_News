@@ -1,8 +1,15 @@
 <template>
   <div>
     <Header />
-    <h1> Artistes </h1>
-    <ArtistesList />
+
+    <main class="px-6 py-12">
+
+      <h1 class="text-2xl text-center"> Artistes/Groupes </h1>
+
+      <ArtistesList />
+
+    </main>
+    
     <Footer />
   </div>
 </template>

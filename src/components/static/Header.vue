@@ -41,7 +41,6 @@ export default {
   },
   created () {
     // Check user is Authenticated
-    console.log(localStorage)
     if (localStorage.vuejs_user_id) {
       this.isAuth = true
     } else {
