@@ -4,6 +4,10 @@
 
 /********** General *********/
 
+main {
+  min-height: 100vh;
+}
+
 input {
   background-color: transparent;
   border: 1px solid #fff;
@@ -45,6 +49,41 @@ input {
   bottom: 0;
   opacity: 1;
 }
+
+
+/********** Footer *********/
+
+.footer__title svg {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  fill: #FFF;
+}
+
+.footer__main-nav-link-txt {
+  z-index: 1;
+  position: relative;
+}
+
+.footer__main-nav-link-txt::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #222;
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+.footer__main-nav-link.router-link-active .footer__main-nav-link-txt::before,
+.footer__main-nav-link:hover .footer__main-nav-link-txt::before {
+  bottom: 0;
+  opacity: 1;
+}
+
 
 /********** Home *********/
 

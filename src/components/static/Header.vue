@@ -19,7 +19,7 @@
       <ul class="flex items-center">
         <li><router-link v-if="!isAuth" class="header__second-nav-link p-4" to="/login"> <span class="header__second-nav-link-txt">Connexion</span> </router-link></li>
         <li><router-link v-if="!isAuth" class="header__second-nav-link p-4" to="/register"> <span class="header__second-nav-link-txt">Inscription</span> </router-link></li>
-        <li><button v-if="isAuth" @click="logout" class="header__second-nav-link p-4"> <span class="header__second-nav-link-txt">Logout</span> </button></li>
+        <li><button v-if="isAuth" @click="logout" class="header__second-nav-link p-4"> <span class="header__second-nav-link-txt">Déconnexion</span> </button></li>
       </ul>
     </nav>
   </header>
