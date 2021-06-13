@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2> Les dernièrs albums </h2>
     <id-album
       v-for="album in albums" 
       :key="album.id" 
