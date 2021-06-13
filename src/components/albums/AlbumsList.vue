@@ -1,8 +1,9 @@
 <template>
   <div>
     <h2> Les dernièrs albums </h2>
+    <input type="text" v-model="search" placeholder="album">
     <id-album
-      v-for="album in albums" 
+      v-for="album in filteredAlbums" 
       :key="album.id" 
       :album="album"
     ></id-album>
@@ -18,6 +19,7 @@ export default {
   data () {
     return {
       albums: [],
+      search: ''
     }
   },
   components: {
@@ -33,6 +35,13 @@ export default {
         }
       })
       this.albums = res.data
+    }
+  },
+  computed: {
+    filteredAlbums: function () {
+      return this.albums.filter((album) => {
+        return album.name.toLowerCase().match(this.search.toLowerCase())
+      })
     }
   },
   mounted () {

@@ -1,15 +1,16 @@
 <template>
   <div>
     <h2> Tous les artistes : </h2>
+    <input type="text" v-model="search" placeholder="artiste">
     <id-artiste 
-      v-for="artist in artists" 
+      v-for="artist in filteredArtists" 
       :key="artist.id" 
       :artist="artist"
     ></id-artiste>
 
     <paginate
       :click-handler="functionName"
-      :page-range="3"
+      :page-count="10"
       :prev-text="'Prev'"
       :next-text="'Next'"
       :container-class="'className'">
@@ -26,6 +27,7 @@ export default {
   data () {
     return {
       artists: [],
+      search: ''
     }
   },
   components: {
@@ -44,6 +46,13 @@ export default {
     },
     functionName: function (pageNum) {
       console.log(pageNum) 
+    }
+  },
+  computed: {
+    filteredArtists: function () {
+      return this.artists.filter((artist) => {
+        return artist.name.toLowerCase().match(this.search.toLowerCase())
+      })
     }
   },
   mounted () {
