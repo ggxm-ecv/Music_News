@@ -1,68 +1,75 @@
 <template>
   <div>
-    <h1> Admin </h1>
+    <AdminHeader />
 
-    <nav class="">
-      <ul class="admin__nav">
-        <li class="admin__nav-item active"
-            cat-name="news"
-            @click="switchCat"
-        >
-          Actualités
-        </li>
-        <li class="admin__nav-item"
-            cat-name="artists"
-            @click="switchCat"
-        >
-          Artistes
-        </li>
-        <li class="admin__nav-item"
-            cat-name="albums"
-            @click="switchCat"
-        >
-          Albums
-        </li>
-        <li class="admin__nav-item"
-            cat-name="concerts"
-            @click="switchCat"
-        >
-          Concerts
-        </li>
-        <li class="admin__nav-item"
-            cat-name="genres"
-            @click="switchCat"
-        >
-          Genres
-        </li>
-      </ul>
-    </nav>
+    <main class="px-6 py-12 bg-gray-900">
 
-    <div class="admin__content">
-      <div v-if="content.news" class="admin__cat">
-        <NewsList />
+      <nav>
+        <ul class="flex justify-center items-center">
+          <li class="admin__nav-item active inline-block px-4 py-2 m-2 rounded-lg border-2 border-gray-800"
+              cat-name="news"
+              @click="switchCat"
+          >
+            Actualités
+          </li>
+          <li class="admin__nav-item inline-block px-4 py-2 m-2 rounded-lg border-2 border-gray-800"
+              cat-name="artists"
+              @click="switchCat"
+          >
+            Artistes
+          </li>
+          <li class="admin__nav-item inline-block px-4 py-2 m-2 rounded-lg border-2 border-gray-800"
+              cat-name="albums"
+              @click="switchCat"
+          >
+            Albums
+          </li>
+          <li class="admin__nav-item inline-block px-4 py-2 m-2 rounded-lg border-2 border-gray-800"
+              cat-name="concerts"
+              @click="switchCat"
+          >
+            Concerts
+          </li>
+          <li class="admin__nav-item inline-block px-4 py-2 m-2 rounded-lg border-2 border-gray-800"
+              cat-name="genres"
+              @click="switchCat"
+          >
+            Genres
+          </li>
+        </ul>
+      </nav>
+
+      <div class="admin__content">
+        <div v-if="content.news" class="admin__cat">
+          <NewsList />
+        </div>
+
+        <div v-if="content.artists" class="admin__cat">
+          <ArtistesList />
+        </div>
+
+        <div v-if="content.albums" class="admin__cat">
+          <AlbumsList />
+        </div>
+
+        <div v-if="content.concerts" class="admin__cat">
+          <ConcertsList />
+        </div>
+
+        <div v-if="content.genres" class="admin__cat">
+          <GenresList />
+        </div>
       </div>
 
-      <div v-if="content.artists" class="admin__cat">
-        <ArtistesList />
-      </div>
+    </main>
 
-      <div v-if="content.albums" class="admin__cat">
-        <AlbumsList />
-      </div>
-
-      <div v-if="content.concerts" class="admin__cat">
-        <ConcertsList />
-      </div>
-
-      <div v-if="content.genres" class="admin__cat">
-        <GenresList />
-      </div>
-    </div>
+    <AdminFooter />
   </div>
 </template>
 
 <script>
-// import axios from 'axios'
+import AdminHeader from '@/components/static/AdminHeader'
+import AdminFooter from '@/components/static/AdminFooter'
 import NewsList from '@/components/admin/news/NewsList'
 import ArtistesList from '@/components/admin/artistes/ArtistesList'
 import AlbumsList from '@/components/admin/albums/AlbumsList'
@@ -82,6 +89,8 @@ export default {
     }
   },
   components: {
+    AdminHeader,
+    AdminFooter,
     NewsList,
     ArtistesList,
     AlbumsList,
