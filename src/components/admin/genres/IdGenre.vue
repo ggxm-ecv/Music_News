@@ -1,14 +1,12 @@
 <template>
-  <div class="id-card">
-    <p> {{ genre.name }} </p>
+  <div class="id-card block bg-gray-800 p-6 rounded-lg shadow-lg">
+    <h2 class="mt-4 text-2xl font-bold"> {{ genre.name }} </h2>
     <slot></slot>
-    <button @click="formOpen = !formOpen">Editer le Genre</button>
-    <div v-if="formOpen">
-      <label>Nom : </label>
-      <input v-model="form.name">
+    <button @click="formOpen = !formOpen" class="inline-block px-4 py-2 ml-2 mt-2 rounded-lg border-2 border-gray-700">Editer le Genre</button>
+    <div v-if="formOpen" class="w-80 mt-4 mx-auto shadow-md bg-gray-700 p-6 flex flex-col justify-between items-center rounded-lg">
+      <input v-model="form.name" placeholder="Nom">
       <br>
-      <br>
-      <button @click="submitForm">Enregistrer le Genre</button>
+      <button @click="submitForm" class="text-black bg-white mt-2 px-4 py-2 rounded-lg">Enregistrer le Genre</button>
     </div>
   </div>
 </template>

@@ -1,27 +1,23 @@
 <template>
-  <div class="id-card">
-    <img height="300px" :src="artist.avatar">
-    <p> {{ artist.name }} </p>
-    <p> {{artist.description}} </p>
+  <div class="id-card block bg-gray-800 p-6 rounded-lg shadow-lg">
+    <img class="artiste__img rounded-lg" :src="artist.avatar">
+    <h2 class="mt-4 text-2xl font-bold"> {{ artist.name }} </h2>
+    <p class="mt-2"> {{artist.description}} </p>
     <slot></slot>
-    <button @click="formOpen = !formOpen">Editer un Artist</button>
-    <div v-if="formOpen">
-      <label>Nom : </label>
-      <input v-model="form.name">
+    <button @click="formOpen = !formOpen" class="inline-block px-4 py-2 ml-2 mt-2 rounded-lg border-2 border-gray-700">Editer un Artist</button>
+    <div v-if="formOpen" class="w-80 mt-4 mx-auto shadow-md bg-gray-700 p-6 flex flex-col justify-between items-center rounded-lg">
+      <input v-model="form.name" placeholder="Nom">
       <br>
-      <label>Origin : </label>
-      <input v-model="form.origin">
+      <input v-model="form.origin" placeholder="Origin">
       <br>
-      <label>Avatar : </label>
-      <input v-model="form.avatar" type="url">
+      <input v-model="form.avatar" type="url" placeholder="Avatar (url)">
       <br>
       <label>Genre : </label>
       <input v-model.number="form.genreId" type="number" min="0">
       <br>
-      <label>Description : </label>
-      <textarea v-model="form.description" rows="5" cols="33"></textarea>
+      <textarea v-model="form.description" placeholder="Description"></textarea>
       <br>
-      <button @click="submitForm">Enregistrer l'artiste</button>
+      <button @click="submitForm" class="text-black bg-white mt-2 px-4 py-2 rounded-lg">Enregistrer l'artiste</button>
     </div>
   </div>
 </template>

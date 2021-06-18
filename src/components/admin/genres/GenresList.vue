@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h2> Tous les genres </h2>
-    <br>
     <AddGenre @getNewData="setNewData" />
     <br>
     <id-genre
@@ -10,7 +8,7 @@
       :genre="genre"
       @updateData="updateData"
     >
-      <button @click="deleteGenre(genre)"> Supprimer le Genre </button>
+      <button @click="deleteGenre(genre)" class="inline-block px-4 py-2 mt-4 rounded-lg border-2 border-gray-700"> Supprimer le Genre </button>
     </id-genre>
   </div>
 </template>
