@@ -29,13 +29,61 @@ textarea::placeholder {
 }
 
 
+/********** Helper *********/
+
+@media screen and (min-width: 1024px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1024px) { 
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+
 /********** Header *********/
+
+.header__burger-menu,
+.header__main-nav-close {
+  cursor: pointer;
+}
+
+.header__burger-menu svg,
+.header__main-nav-close svg {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  fill: #FFF;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__main-nav {
+    display: none;
+    transform: translateX(-100%);
+    transition: all 200ms ease-out;
+  }
+
+  .header__main-nav.active {
+    display: flex;
+    transform: translateX(0);
+  }
+}
 
 .header__title svg {
   display: inline-block;
   width: 32px;
   height: 32px;
   fill: #FFF;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__title svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .header__main-nav-link {

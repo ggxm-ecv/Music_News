@@ -5,7 +5,7 @@
     <main class="px-6 py-12 bg-gray-900">
 
       <nav>
-        <ul class="flex justify-center items-center">
+        <ul class="flex justify-center items-center flex-wrap">
           <li class="admin__nav-item active inline-block px-4 py-2 m-2 rounded-lg border-2 border-gray-800"
               cat-name="news"
               @click="switchCat"
