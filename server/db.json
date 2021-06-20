@@ -49,10 +49,16 @@
       "id": 5
     },
     {
-      "title": "ERTY Test",
-      "content": "ERTY AZER",
-      "published": "17/06/2021",
+      "title": "ERTY",
+      "content": "ERTY",
+      "published": "12/05/2021",
       "id": 6
+    },
+    {
+      "title": "Fin des masques !",
+      "content": "C'est la fin des masques ! C'est l'heure de profiter de vos artistes préférés et à l'air libre ! Have fun :D",
+      "published": "20/06/2021",
+      "id": 7
     }
   ],
   "genres": [
@@ -91,6 +97,10 @@
     {
       "name": "ERTY",
       "id": 9
+    },
+    {
+      "name": "Trance",
+      "id": 10
     }
   ],
   "artists": [
@@ -131,13 +141,67 @@
       "id": 4
     },
     {
-      "name": "AZERTYU",
-      "origin": "AZERTYU",
-      "avatar": "AZERTYU",
-      "genreId": 2,
-      "description": "AZERTYUI",
+      "name": "Furax Barbarossa",
+      "origin": "France",
+      "avatar": "http://lesbonsplansurbains.fr/wp-content/uploads/2020/03/Furax-Barbarossa.jpg",
+      "genreId": 3,
+      "description": "Furax, aussi connu sous le nom de Furax Barbarossa, est un rappeur français originaire de Toulouse aux origines corses. Il a été un membre actif du collectif Polychrome 7",
       "likes": 0,
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "Mandragora",
+      "origin": "Mexique",
+      "avatar": "https://i1.sndcdn.com/artworks-000155412210-67d1lp-t500x500.jpg",
+      "genreId": 10,
+      "description": "Mandragora est un jeune artiste électro spécialisé dans la psy trance qui est originaire du Mexique",
+      "likes": 0,
+      "id": 7
+    },
+    {
+      "name": "Népal",
+      "origin": "France",
+      "avatar": "https://img-4.linternaute.com/bPFpQvqs3TpQzTD_5fU30g85f2M=/1500x/smart/a597735514014210b952356f1a27755a/ccmcms-linternaute/18422162.jpg",
+      "genreId": 3,
+      "description": "Népal, de son vrai nom Clément Di Fiore, né le 12 octobre 1990 dans le 14e arrondissement de Paris et mort le 9 novembre 2019 à Clichy dans les Hauts-de-Seine, est un rappeur et beatmaker français. Il est également connu sous les noms KLM et GrandMaster Splinter. Co-fondateur du collectif de la 75e Session, il forme avec Doums le duo 2Fingz. Il est également proche du collectif L'Entourage, du groupe 1995 et du projet Les Gars laxistes.",
+      "likes": 0,
+      "id": 8
+    },
+    {
+      "name": "Panda Dub",
+      "origin": "France",
+      "avatar": "https://i1.wp.com/dynamhit.org/wp-content/uploads/2018/06/panda-dub.jpg?w=620",
+      "genreId": 5,
+      "description": "Panda Dub est un musicien, producteur et beatmaker français, originaire de Lyon. Il évolue principalement dans le monde du dub (un mélange de reggae et d'électro et est l'un des artistes les plus connus du milieu.",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "Sopico",
+      "origin": "France",
+      "avatar": "https://intrld.com/wp-content/uploads/2018/01/sopico-1.jpg.webp",
+      "genreId": 3,
+      "description": "Sopico de son vrai nom Sofiane, né le 4 février 1996 à Paris et originaire du 18e arrondissement, est un rappeur, auteur, compositeur, interprète, musicien (notamment guitariste), directeur artistique et acteur.",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "Vald",
+      "origin": "France",
+      "avatar": "https://lerocherdepalmer.fr/artistes/vald/pht2.jpg",
+      "genreId": 3,
+      "description": "Vald, de son vrai nom Valentin Le Du, né le 15 juillet 1992 à Aulnay-sous-Bois, en Seine-Saint-Denis, est un rappeur, producteur, et parolier français.\n\nAprès deux mixtapes et deux EPs, il sort son premier album studio Agartha le 20 janvier 2017 suivi de XEU, le 2 février 2018, puis son troisième album studio Ce monde est cruel en 2019.\n\nDébut 2020, Vald crée son label indépendant : Echelon Music.",
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": "Blastoyz",
+      "origin": "Israël",
+      "avatar": "https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2017/06/25030033/S5QIE5uhFA95CSyjc0fgyVwDzSemzJ0ibDXQWRNK-972x597.jpeg",
+      "genreId": 10,
+      "description": "Blastoyz (Aka Kobi Nigreker), est l'un des artistes phares de la scène psytrance de ces dernières années, il a frappé la piste de danse depuis l'âge de 16 ans et a créé un style unique avec une production musicale édifiante, qui a développé avec sa forte dévotion à la musique. Année après année, Kobi continue de grandir et de renforcer sa réputation de producteur recherché et de DJ charismatique, aimé de ses fans. Il est connu pour son style de ligne de basse hypnotique et ses mélodies qui sont devenues sa signature sonore.",
+      "likes": 0,
+      "id": 12
     }
   ],
   "albums": [
@@ -168,6 +232,41 @@
       "tracks": 2,
       "artistId": 2,
       "id": 4
+    },
+    {
+      "name": "Testa Nera",
+      "released": 2014,
+      "tracks": 17,
+      "artistId": 5,
+      "id": 5
+    },
+    {
+      "name": "Mechanics Of Travel",
+      "released": 2019,
+      "tracks": 9,
+      "artistId": 6,
+      "id": 6
+    },
+    {
+      "name": "XEU",
+      "released": 2018,
+      "tracks": 17,
+      "artistId": 10,
+      "id": 7
+    },
+    {
+      "name": "The Lost Ship",
+      "released": 2015,
+      "tracks": 10,
+      "artistId": 8,
+      "id": 8
+    },
+    {
+      "name": "Mojo",
+      "released": 2016,
+      "tracks": 12,
+      "artistId": 9,
+      "id": 9
     }
   ],
   "concerts": [
@@ -194,6 +293,24 @@
       "date": "28/05/2021",
       "artistId": 2,
       "id": 4
+    },
+    {
+      "name": "Psychedelic Experience",
+      "date": "20/05/2022",
+      "artistId": 6,
+      "id": 5
+    },
+    {
+      "name": "Les Vieilles Charues",
+      "date": "13/08/2021",
+      "artistId": 5,
+      "id": 6
+    },
+    {
+      "name": "No Logo",
+      "date": "17/06/2022",
+      "artistId": 8,
+      "id": 7
     }
   ]
 }
