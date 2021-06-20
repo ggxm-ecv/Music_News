@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2> Tous les artistes : </h2>
-    <input type="text" v-model="search" placeholder="artiste">
+    <input class="rounded-lg" type="text" v-model="search" placeholder="artiste">
     <id-artiste 
       v-for="artist in filteredArtists" 
       :key="artist.id" 
@@ -40,6 +40,10 @@ export default {
       const res = await axios.get('http://localhost:3000/artists', {
         headers: {
           Authorization: `Bearer ${token}`
+        },
+        params: {
+          _limit: 3,
+          _offset: 3
         }
       })
       this.artists = res.data
