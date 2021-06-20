@@ -8,11 +8,11 @@
     ></id-artiste>
 
     <paginate
-      :click-handler="functionName"
-      :page-count="10"
-      :prev-text="'Prev'"
-      :next-text="'Next'"
-      :container-class="'className'">
+      :click-handler="updatePaginate"
+      :page-count="pageCount"
+      prev-text="Prev"
+      next-text="Next"
+      container-class="paginate__wrapper">
     </paginate>
   </div>
 </template>
@@ -26,7 +26,10 @@ export default {
   data () {
     return {
       artists: [],
-      search: ''
+      search: '',
+      pageCount: 0,
+      page: 1,
+      limit: 3
     }
   },
   components: {
@@ -36,19 +39,33 @@ export default {
     async fetchData () {
       const token = localStorage.getItem('vuejs_token')
 
-      const res = await axios.get('http://localhost:3000/artists', {
+      // get page count
+      const resAll = await axios.get('http://localhost:3000/artists', {
         headers: {
           Authorization: `Bearer ${token}`
-        },
-        params: {
-          _limit: 3,
-          _offset: 3
+        }
+      })
+      this.pageCount = resAll.data.length / this.limit
+
+      const res = await axios.get(`http://localhost:3000/artists?_page=${this.page}&_limit=${this.limit}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
         }
       })
       this.artists = res.data
     },
-    functionName: function (pageNum) {
-      console.log(pageNum) 
+    async updatePaginate (pageNum) {
+      const token = localStorage.getItem('vuejs_token')
+
+      this.page = pageNum
+
+      const res = await axios.get(`http://localhost:3000/artists?_page=${this.page}&_limit=${this.limit}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      
+      this.artists = res.data
     }
   },
   computed: {
@@ -65,13 +82,14 @@ export default {
 </script>
 
 <style >
-  .className {
-    width: 60px;;
+  .paginate__wrapper {
     display: flex;
+    justify-content: center;
+    max-width: 400px;
     margin: 0 auto;
     list-style: none;
   }
-  .className li {
+  .paginate__wrapper li {
     margin: 0 20px;
   }
 </style>
