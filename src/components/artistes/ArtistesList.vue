@@ -45,7 +45,7 @@ export default {
           Authorization: `Bearer ${token}`
         }
       })
-      this.pageCount = resAll.data.length / this.limit
+      this.pageCount = Math.ceil(resAll.data.length / this.limit)
 
       const res = await axios.get(`http://localhost:3000/artists?_page=${this.page}&_limit=${this.limit}`, {
         headers: {
@@ -64,7 +64,7 @@ export default {
           Authorization: `Bearer ${token}`
         }
       })
-      
+
       this.artists = res.data
     }
   },
