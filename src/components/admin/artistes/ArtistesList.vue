@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h2> Tous les artistes </h2>
-    <br>
     <AddArtiste @getNewData="setNewData" />
     <br>
     <id-artiste 
@@ -10,7 +8,7 @@
       :artist="artist"
       @updateData="updateData"
     >
-      <button @click="deleteArtist(artist)"> Supprimer l'Artiste/groupe </button>
+      <button @click="deleteArtist(artist)" class="inline-block px-4 py-2 mt-4 rounded-lg border-2 border-gray-700"> Supprimer l'Artiste/groupe </button>
     </id-artiste>
   </div>
 </template>

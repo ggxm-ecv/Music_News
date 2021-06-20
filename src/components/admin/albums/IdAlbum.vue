@@ -1,14 +1,13 @@
 <template>
-  <div class="id-card">
-    <p> {{ album.name }} </p>
-    <p> {{ album.released }} </p>
-    <p> Nombre de musique : {{ album.tracks }} </p>
-    <p> Id artiste/groupe : {{ album.artistId }} </p>
+  <div class="id-card block bg-gray-800 p-6 rounded-lg shadow-lg">
+    <h2 class="mt-4 text-2xl font-bold"> {{ album.name }} </h2>
+    <p class="mt-2"> {{ album.released }} </p>
+    <p class="mt-2"> Nombre de musique : {{ album.tracks }} </p>
+    <p class="mt-2"> Id artiste/groupe : {{ album.artistId }} </p>
     <slot></slot>
-    <button @click="formOpen = !formOpen">Editer un Album</button>
-    <div v-if="formOpen">
-      <label>Nom : </label>
-      <input v-model="form.name">
+    <button @click="formOpen = !formOpen" class="inline-block px-4 py-2 ml-2 mt-2 rounded-lg border-2 border-gray-700">Editer un Album</button>
+    <div v-if="formOpen" class="w-80 mt-4 mx-auto shadow-md bg-gray-700 p-6 flex flex-col justify-between items-center rounded-lg">
+      <input v-model="form.name" placeholder="Nom">
       <br>
       <label>Année : </label>
       <input v-model.number="form.released" type="number" min="1900">
@@ -20,7 +19,7 @@
       <input v-model.number="form.artistId" type="number" min="0">
       <br>
       <br>
-      <button @click="submitForm">Enregistrer l'album</button>
+      <button @click="submitForm" class="text-black bg-white mt-2 px-4 py-2 rounded-lg">Enregistrer l'album</button>
     </div>
   </div>
 </template>

@@ -1,15 +1,14 @@
 <template>
-  <div>
-    <button @click="formOpen = !formOpen">Ajouter une News</button>
-    <div v-if="formOpen">
-      <label>Titre : </label>
-      <input v-model="form.title">
+  <div class="id-card p-6 rounded-lg">
+    <div class="text-center">
+      <button @click="formOpen = !formOpen" class="inline-block px-4 py-2 mt-2 rounded-lg border-2 border-gray-700">Ajouter une News</button>
+    </div>
+    <div v-if="formOpen" class="w-80 mt-4 mx-auto shadow-md bg-gray-700 p-6 flex flex-col justify-between items-center rounded-lg">
+      <input v-model="form.title" placeholder="Titre">
       <br>
-      <label>Contenu : </label>
-      <textarea v-model="form.content" rows="5" cols="33"></textarea>
+      <textarea v-model="form.content" placeholder="Contenu"></textarea>
       <br>
-      <br>
-      <button @click="submitForm">Ajouter la News</button>
+      <button @click="submitForm" class="text-black bg-white mt-2 px-4 py-2 rounded-lg">Ajouter la News</button>
     </div>
   </div>
 </template>

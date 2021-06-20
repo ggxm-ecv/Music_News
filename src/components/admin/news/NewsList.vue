@@ -1,16 +1,13 @@
 <template>
   <div>
-    <h2> Les dernières news </h2>
-    <br>
     <AddNews @getNewData="setNewData" />
-    <br>
     <id-news
       v-for="news in news" 
       :key="news.id" 
       :news="news"
       @updateData="updateData"
     >
-      <button @click="deleteNews(news)"> Supprimer la News </button>
+      <button @click="deleteNews(news)" class="inline-block px-4 py-2 mt-4 rounded-lg border-2 border-gray-700"> Supprimer la News </button>
     </id-news>
   </div>
 </template>

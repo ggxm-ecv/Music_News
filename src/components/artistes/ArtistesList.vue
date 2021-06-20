@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h2> Tous les artistes : </h2>
-    <input class="rounded-lg" type="text" v-model="search" placeholder="artiste">
+    <input class="rounded-lg searchBar" type="text" v-model="search" placeholder="Rechercher un artiste">
     <id-artiste 
       v-for="artist in filteredArtists" 
       :key="artist.id" 

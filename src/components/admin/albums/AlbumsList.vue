@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h2> Les dernièrs albums </h2>
-    <br>
     <AddAlbum @getNewData="setNewData" />
     <br>
     <id-album
@@ -10,7 +8,7 @@
       :album="album"
       @updateData="updateData"
     >
-      <button @click="deleteAlbum(album)"> Supprimer l'Album </button>
+      <button @click="deleteAlbum(album)" class="inline-block px-4 py-2 mt-4 rounded-lg border-2 border-gray-700"> Supprimer l'Album </button>
     </id-album>
   </div>
 </template>

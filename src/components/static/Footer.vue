@@ -8,7 +8,7 @@
     </div>
 
     <nav class="mt-4 flex justify-center">
-      <ul class="flex items-center">
+      <ul class="flex flex-col lg:flex-row items-center">
         <li><router-link class="footer__main-nav-link p-4" to="/"> <span class="footer__main-nav-link-txt">Accueil</span> </router-link></li>
         <li><router-link class="footer__main-nav-link p-4" to="/concerts"> <span class="footer__main-nav-link-txt">Concerts</span> </router-link></li>
         <li><router-link class="footer__main-nav-link p-4" to="/artistes"> <span class="footer__main-nav-link-txt">Artistes/Groupes</span> </router-link></li>

@@ -1,8 +1,15 @@
 <template>
   <div>
     <Header />
-    <h1> Concerts </h1>
-    <ConcertsList />
+
+    <main class="px-6 py-12">
+
+      <h1 class="text-2xl text-center"> Concerts </h1>
+      
+      <ConcertsList />
+
+    </main>
+    
     <Footer />
   </div>
 </template>

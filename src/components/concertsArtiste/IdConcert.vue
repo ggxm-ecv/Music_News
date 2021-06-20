@@ -1,6 +1,6 @@
 <template>
   <div v-if="concert.artistId == `${this.$route.params.id}`" class="id-card">
-    <p>A {{ concert.name }} le {{ concert.date }} </p>
+    <p>{{ concert.name }} le {{ concert.date }} </p>
   </div>
 </template>
 

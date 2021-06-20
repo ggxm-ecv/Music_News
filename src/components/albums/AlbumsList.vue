@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h2> Les dernièrs albums </h2>
-    <input type="text" v-model="search" placeholder="album">
+    <input class="rounded-lg searchBar" type="text" v-model="search" placeholder="Rechercher un album">
     <id-album
       v-for="album in filteredAlbums" 
       :key="album.id" 

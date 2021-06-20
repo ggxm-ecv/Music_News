@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h2> Tous les concerts </h2>
-    <br>
     <AddConcert @getNewData="setNewData" />
     <br>
     <id-concerts 
@@ -10,7 +8,7 @@
       :concert="concert"
       @updateData="updateData"
     >
-      <button @click="deleteConcert(concert)"> Supprimer le Concert </button>
+      <button @click="deleteConcert(concert)" class="inline-block px-4 py-2 mt-4 rounded-lg border-2 border-gray-700"> Supprimer le Concert </button>
     </id-concerts>
   </div>
 </template>
